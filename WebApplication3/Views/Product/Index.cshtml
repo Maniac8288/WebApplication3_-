@@ -1,0 +1,29 @@
+﻿@model IEnumerable<WebApplication3.Models.Product>
+
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @foreach (var item in Model) { 
+    <h3>Имя продукта:@item.Name</h3>
+    if (item.Category =="Алкоголь"){
+    <p> На алкоголь действует <b>скидка 10%</b></p>
+    
+    }
+    if (item.Category =="Канцтовары"){
+    @:Стоимость доставки 10рублей
+    }
+    <hr />}
+    <div> 
+
+    </div>
+</body>
+</html>
